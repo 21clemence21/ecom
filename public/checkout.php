@@ -10,7 +10,12 @@
       <h3 class="text-center bg-danger"><?php display_message(); ?></h3>
       <h1>Checkout</h1>
 
-<form action="">
+<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+  <input type="hidden" name="cmd" value="_cart">
+  <input type="hidden" name="business" value="businesspaypal@ecom.com">
+  <input type="hidden" name="upload" value="1">
+  <input type="hidden" name="currency_code" value="EUR">
+<input type="hidden" name="charset" value="utf-8">
     <table class="table table-striped">
         <thead>
         <thead>
@@ -27,6 +32,9 @@
 
         </tbody>
     </table>
+    <input type="image" name="submit"
+    src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_LG.gif"
+    alt="PayPal - The safer, easier way to pay online">
 </form>
 
 
@@ -41,7 +49,7 @@
 <tr class="cart-subtotal">
 <th>Items:</th>
 <td><span class="amount">
-<?php 
+<?php
 
 echo isset($_SESSION['item_quantity']) ? $_SESSION['item_quantity'] : $_SESSION['item_quantity'] = "";
 
@@ -57,7 +65,7 @@ echo isset($_SESSION['item_quantity']) ? $_SESSION['item_quantity'] : $_SESSION[
 <th>Order Total</th>
 <td><strong><span class="amount">
 
-<?php 
+<?php
 
 echo isset($_SESSION['item_total']) ? $_SESSION['item_total'] : $_SESSION['item_total'] = "0";
 

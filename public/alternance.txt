@@ -15,3 +15,5 @@ Convention tripartite
 entreprise - 
 OPCA OPCO financé par l'entreprise 
 27 janvier 2020 - 22 janvier 2021
+
+http://localhost/ecom/public/thank_you.php?tx=32333&amt=345&cc=EUR&st=Completed
