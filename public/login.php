@@ -11,12 +11,19 @@
         <div class="col-sm-4 col-sm-offset-5">         
             <form class="" action="" method="post" enctype="multipart/form-data">
 
-                <?php login_user(); ?>
+
+                <!--FUNCTION LOGIN USER-->
+                <?php 
+                login_user();   
+                ?>
+                <!--FUNCTION LOGIN USER-->
+
+
                 <div class="form-group"><label for="">
                     Username<input type="text" name="username" class="form-control"></label>
                 </div>
                  <div class="form-group"><label for="password">
-                    Password<input type="text" name="password" class="form-control"></label>
+                    Password<input type="password" name="password" class="form-control"></label>
                 </div>
 
                 <div class="form-group">
